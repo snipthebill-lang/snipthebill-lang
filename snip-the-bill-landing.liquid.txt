@@ -1,0 +1,41 @@
+{% comment %}
+Snip The Bill Landing Section - matches B12 design
+{% endcomment %}
+
+<section class="snip-landing">
+  <div class="snip-hero">
+    <img src="{{ 'hero-smart-plug.jpg' | asset_url }}" alt="Smart Plug" class="hero-img">
+    <div class="hero-content">
+      <h1>Smart Gadgets That Cut Your Bills</h1>
+      <p>Discover energy-saving smart plugs, outlets, and extension cords that help you lower costs effortlessly.</p>
+      <a href="https://snipthebill.com" class="snip-btn">Shop Now</a>
+    </div>
+  </div>
+
+  <div class="snip-products">
+    <div class="snip-product">
+      <img src="{{ 'smart-outlet.jpg' | asset_url }}" alt="Smart Outlet">
+      <h3>Smart Outlet</h3>
+      <p>Monitor and control power usage from your phone.</p>
+    </div>
+    <div class="snip-product">
+      <img src="{{ 'smart-extension.jpg' | asset_url }}" alt="Smart Extension Cord">
+      <h3>Smart Extension Cord</h3>
+      <p>Cut phantom power and save energy easily.</p>
+    </div>
+    <div class="snip-product">
+      <img src="{{ 'hero-smart-plug.jpg' | asset_url }}" alt="Smart Plug">
+      <h3>Smart Plug</h3>
+      <p>Automate your devices and reduce your bills.</p>
+    </div>
+  </div>
+
+  <div class="snip-footer">
+    <h2>Join thousands saving on their energy bills today!</h2>
+    {% form 'customer' %}
+      <input type="email" name="contact[email]" placeholder="Enter your email" required>
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <button type="submit" class="snip-btn">Subscribe</button>
+    {% endform %}
+  </div>
+</section>
